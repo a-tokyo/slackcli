@@ -147,3 +147,5 @@ Tests live alongside source files (e.g., `src/lib/curl-parser.test.ts`). The cur
 ## Version
 
 The app version (`__APP_VERSION__`) is injected at build time from the version string in the build scripts in `package.json`.
+
+Releases are tagged `v<x.y.z>`. `package.json` `version` MUST match the tag — CI (`release.yml` `verify-version` job) hard-fails the release on mismatch. Bump `package.json` (and `CHANGELOG.md`) before tagging.
